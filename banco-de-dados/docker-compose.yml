@@ -1,0 +1,82 @@
+version: '3'
+
+services:
+
+    exemplo-oracle:
+        build: ./oracle
+        container_name: exemplo-oracle
+        environment:
+            - ENABLE_ARCHIVELOG=true
+            - ORACLE_PWD=senha123
+            # - ORACLE_EDITION=standard
+            - ENABLE_TCPS=true
+        volumes:
+            - exemplo_oracledatabase:/opt/oracle/oradata
+        ports:
+            - 1521:1521
+            - 8080:8080
+            - 5500:5500
+
+    exemplo-sqlserver:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: exemplo-sqlserver
+        environment:
+            - MSSQL_USER=SA
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=123
+            - MSSQL_PID=Developer
+        ports:
+            - "1433:1433"
+        volumes:
+            - exemplo_sqlserver:/var/opt/mssql
+
+    exemplo-mysql:
+      image: mysql:8.0.31
+      container_name: exemplo-mysql
+      ports:
+          - "3306:3306"
+      volumes:
+          - exemplo_msyql:/var/lib/mysql
+      environment:
+          - MYSQL_DATABASE=teste
+          - MYSQL_ROOT_PASSWORD=root
+
+    exemplo-mongodb:
+        container_name: exemplo-mongodb
+        image: mongo:6
+        environment:
+        - MONGO_INITDB_DATABASE=teste
+        - MONGO_INITDB_ROOT_USERNAME=aluno
+        - MONGO_INITDB_ROOT_PASSWORD=123
+        expose:
+        - "27017"
+        ports:
+        - "27017:27017"
+        volumes:
+        - exemplo_mongodb:/data/db
+
+
+    exemplo-postgres:
+        container_name: exemplo-postgres
+        image: postgres:14-alpine
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: teste
+            PGDATA: /data/postgres
+        ports:
+        - "5432:5432"
+        volumes:
+        - exemplo_postgres:/data/postgres
+
+volumes:
+    exemplo_msyql:
+        driver: local
+    exemplo_mongodb:
+        driver: local
+    exemplo_postgres:
+        driver: local
+    exemplo_sqlserver:
+        driver: local
+    exemplo_oracledatabase:
+        driver: local
