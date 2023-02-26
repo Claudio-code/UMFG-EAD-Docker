@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    nextjs-nodejs:
+        build: .
+        container_name: nextjs-nodejs
+        ports:
+            - "8000:3000"
+        volumes:
+            - .:/usr/src/app
