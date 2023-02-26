@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    laravel-php:
+        build: .
+        container_name: laravel-php
+        volumes:
+            - .:/var/www
+        ports:
+            - "8000:8000"
