@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+    golang-gin:
+        build: .
+        container_name: golang-gin
+        ports:
+            - "8000:8080"
