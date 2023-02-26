@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-    nestjs-nodejs:
+    nodejs-primeiro:
         build: .
-        container_name: nestjs-nodejs
+        container_name: nodejs-primeiro
         ports:
             - "8000:3000"
         volumes:
-            - .:/usr/src/app
+            - .:/home/node/api
