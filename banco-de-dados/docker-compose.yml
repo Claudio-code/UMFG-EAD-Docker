@@ -13,9 +13,9 @@ services:
         volumes:
             - exemplo_oracledatabase:/opt/oracle/oradata
         ports:
-            - 1521:1521
+            - 1522:1521
             - 8080:8080
-            - 5500:5500
+            - 5700:5500
 
     exemplo-sqlserver:
         image: mcr.microsoft.com/mssql/server:2022-latest

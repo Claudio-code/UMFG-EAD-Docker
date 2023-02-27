@@ -123,6 +123,9 @@ GRANT CREATE SESSION TO OPS\$oracle;
 GRANT SELECT ON sys.v_\$pdbs TO OPS\$oracle;
 GRANT SELECT ON sys.v_\$database TO OPS\$oracle;
 ALTER USER OPS\$oracle SET container_data=all for sys.v_\$pdbs container = current;
+create user userName identified by password;
+grant connect to userName;
+grant all privileges to userName;
 exit;
 EOF
 
