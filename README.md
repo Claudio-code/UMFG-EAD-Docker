@@ -1,7 +1,7 @@
 # Indice
 
 - [Instalar o Docker no WSL2](#instalar-o-docker-no-WSL2)
-- [Instalar o docker no Windows]()
+- [Instalar o docker no Windows](#instalar-o-docker-no-windows)
 - [Instalar o nodejs no WSL2](#queue)
 - [Instalr o podman no WSL2](#deck)
 
@@ -18,7 +18,7 @@
 
 <br><hr><br>
 
-<a id="Instalar-o-Docker-no-WSL2"></a>
+<a id="instalar-o-docker-no-WSL2"></a>
 # Instalar o Docker no WSL2
 
 - Para instalar o docker direto no WSL2 abra aplicativo o Windows terminal na distribuição de linux que você instalou cole e execute essa sequencia de comandos:
@@ -52,3 +52,13 @@ echo \
 ```bash
 sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y && sudo usermod -aG docker ${USER}
 ```
+
+<br><hr><br>
+
+<a id="instalar-o-docker-no-windows"></a>
+# Instalar o Docker no Windows 10/11
+
+- Para instalar o Docker Desktop para Windows e Mac basta baixar o instalador no site da feramenta: https://www.docker.com/products/docker-desktop/
+
+> **:warning:**
+> Para instalar o docker no Windows você precisa ter a versão PRO do sistema porque o Docker vai usar o Hiper-V para virtualizar um volume de linux.
