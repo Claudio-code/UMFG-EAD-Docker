@@ -1,9 +1,9 @@
 # Indice
 
-- [Instalar o Docker no WSL2](#instalar-o-docker-no-WSL2)
+- [Instalar o Docker no WSL2-Ubuntu](#instalar-o-docker-no-WSL2)
 - [Instalar o docker no Windows](#instalar-o-docker-no-windows)
-- [Instalar o nodejs no WSL2](#queue)
-- [Instalr o podman no WSL2](#deck)
+- [Instalar o nodejs no WSL2-Ubuntu](#queue)
+- [Instalr o podman no WSL2-Ubuntu](#deck)
 
 
 <br>
