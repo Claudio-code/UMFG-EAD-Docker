@@ -2,8 +2,8 @@
 
 - [Instalar o Docker no WSL2-Ubuntu](#instalar-o-docker-no-WSL2)
 - [Instalar o docker no Windows](#instalar-o-docker-no-windows)
-- [Instalar o nodejs no WSL2-Ubuntu](#queue)
-- [Instalr o podman no WSL2-Ubuntu](#deck)
+- [Instalar o nodejs no WSL2-Ubuntu](#instalar-o-nodejs-no-wsl2)
+- [Instalar o podman no WSL2-Ubuntu](#instalar-o-podman-no-wsl2)
 
 
 <br>
@@ -19,7 +19,7 @@
 <br><hr><br>
 
 <a id="instalar-o-docker-no-WSL2"></a>
-# Instalar o Docker no WSL2
+# Instalar o Docker no WSL2-Ubuntu
 
 - Para instalar o docker direto no WSL2 abra aplicativo o Windows terminal na distribuição de linux que você instalou cole e execute essa sequencia de comandos:
 
@@ -62,3 +62,29 @@ sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.i
 
 > **:warning:**
 > Para instalar o docker no Windows você precisa ter a versão PRO do sistema porque o Docker vai usar o Hiper-V para virtualizar um volume de linux.
+
+<br><hr><br>
+
+<a id="instalar-o-nodejs-no-wsl2"></a>
+# Instalar o nodejs no WSL2-Ubuntu
+
+- Para instalar o docker direto no WSL2 abra aplicativo o Windows terminal na distribuição de linux que você instalou cole e execute essa sequencia de comandos:
+
+```bash
+sudo apt update && curl -sL https://deb.nodesource.com/setup_18.x | sudo bash
+sudo apt install nodejs -y
+```
+
+<br><hr><br>
+
+<a id="instalar-o-podman-no-wsl2"></a>
+# Instalar o podman no WSL2-Ubuntu
+
+- Para instalar o docker direto no WSL2 abra aplicativo o Windows terminal na distribuição de linux que você instalou cole e execute essa sequencia de comandos:
+
+> **:warning:**
+> Para instalar o docker no WSL2 você precisa ter o Windows Original e precisa habilitar o systemd na distribuição instalada, para isso siga os passos da documentação da Microsoft: https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/
+
+```bash
+sudo apt update && sudo apt install python3-pip podman -y &&  pip3 install podman-compose
+```
