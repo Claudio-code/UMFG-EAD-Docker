@@ -23,8 +23,8 @@
 
 - Para instalar o docker direto no WSL2 abra aplicativo o Windows terminal na distribuição de linux que você instalou cole e execute essa sequencia de comandos:
 
-> **Alerta**
-> :warning: Para instalar o docker no WSL2 você precisa ter o Windows Original e precisa habilitar o systemd na distribuição instalada, para isso siga os passos da documentação da Microsoft: https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/
+> **:warning: Alerta**
+> Para instalar o docker no WSL2 você precisa ter o Windows Original e precisa habilitar o systemd na distribuição instalada, para isso siga os passos da documentação da Microsoft: https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/
 
 ### 1. 
 ```bash
